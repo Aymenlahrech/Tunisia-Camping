@@ -75,6 +75,7 @@ const Cart = connection.define("carts",{})
 const WishList = connection.define("wishlists",{})
 
 User.hasMany(Product)
+Product.belongsTo(User)
 Product.hasMany(Cart)
 Product.hasMany(WishList)
 User.hasOne(WishList)
